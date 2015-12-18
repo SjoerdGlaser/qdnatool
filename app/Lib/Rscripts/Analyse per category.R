@@ -53,8 +53,8 @@ Score <- function(key, input.answers, n.answer.op, item.names = NULL, category) 
   #     answer.op.tot.cor: Matrix[i,j] IRC of answer option i to item j
   #            (only if any multiple choice items are present, else returns a 0)
   #   These arguments are equal for all lists. The first list also consists of:
-  #     err:
-  #     sub.cat:
+  #     err: which categories has less than 3 items. Analyses are not ran.
+  #     sub.cat: which categories have 3 or more items. Analyses are ran.
 
   # Create Correct/Incorrect Matrix
   if (is.null(item.names)){
